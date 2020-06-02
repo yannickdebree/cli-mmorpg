@@ -1,0 +1,14 @@
+# This kind fo script could be imported and runned by The CLI game.
+
+move 110.23 mode=passive
+
+var hasGold = TRUE
+var havePioche = TRUE
+
+while (hasGold && havePioche) {
+    havePioche = success(use pioche)
+
+    if (havePioche) {
+        hasGold = success(get gold)
+    }
+}
