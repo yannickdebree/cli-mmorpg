@@ -3,7 +3,7 @@
 #include <iostream>
 #include <sstream>
 
-Creature::Creature(int maxLp = 100, int maxMp = 75, int moving = 500)
+Creature::Creature(int maxLp, int maxMp, int moving)
 {
     Creature::level = 0;
     Creature::xp = 0;
@@ -83,7 +83,7 @@ void Creature::showStats()
     std::ostringstream maxLp;
     maxLp << Creature::getMaxLp();
 
-    printL("LP : " + lp.str() + "/" + maxLp.str());
+    printLine("LP : " + lp.str() + "/" + maxLp.str());
 
     std::ostringstream mp;
     mp << Creature::getMp();
@@ -91,7 +91,7 @@ void Creature::showStats()
     std::ostringstream maxMp;
     maxMp << Creature::getMaxMp();
 
-    printL("MP : " + mp.str() + "/" + maxMp.str());
+    printLine("MP : " + mp.str() + "/" + maxMp.str());
 
     std::ostringstream xp;
     xp << Creature::getXp();
@@ -99,7 +99,7 @@ void Creature::showStats()
     std::ostringstream maxXp;
     maxXp << Creature::getMapXp();
 
-    printL("XP : " + xp.str() + "/" + maxXp.str());
+    printLine("XP : " + xp.str() + "/" + maxXp.str());
 
     std::ostringstream x;
     x << Creature::getX();
@@ -107,7 +107,7 @@ void Creature::showStats()
     std::ostringstream y;
     y << Creature::getY();
 
-    printL("Position :");
-    printL("    x : " + x.str());
-    printL("    y : " + y.str());
+    printLine("Position :");
+    printLine("    x : " + x.str());
+    printLine("    y : " + y.str());
 }

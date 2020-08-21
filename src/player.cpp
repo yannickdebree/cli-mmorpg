@@ -21,7 +21,7 @@ void Player::addCreature(Creature *creature)
 {
     if (Player::creatures.size() == Player::creaturesNbrMax)
     {
-        printL("Player can't have more creatures...");
+        printLine("Player can't have more creatures...");
         return;
     }
     Player::creatures.push_back(creature);

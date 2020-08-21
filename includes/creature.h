@@ -16,10 +16,7 @@ private:
     int moving; // Time in milliseconds the creature spent to move to a near position.
 
 public:
-    Creature();
-    Creature(int maxLp);
-    Creature(int maxLp, int maxMp);
-    Creature(int maxLp, int maxMp, int moving);
+    Creature(int maxLp = 100, int maxMp = 75, int moving = 100);
     int getX();
     void setX(int x);
     int getY();

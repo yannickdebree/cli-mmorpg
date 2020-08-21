@@ -4,7 +4,7 @@
 #include <iostream>
 
 void clear();
-void printL(std::string line);
+void printLine(std::string line);
 std::string prompt();
 
 #endif

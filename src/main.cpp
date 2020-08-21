@@ -29,8 +29,8 @@ int main()
 
     bool exit = false;
 
-    printL("Welcome, " + player->getPseudo() + " !");
-    printL("What do you want to do (enter \"help\" to get all possible commands) ?");
+    printLine("Welcome, " + player->getPseudo() + " !");
+    printLine("What do you want to do (enter \"help\" to get all possible commands) ?");
 
     while (!exit)
     {
@@ -65,7 +65,7 @@ int main()
         }
     }
 
-    printL("Bye bye !");
+    printLine("Bye bye !");
 
     delete world;
 

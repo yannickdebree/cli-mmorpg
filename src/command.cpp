@@ -33,14 +33,14 @@ Command resolveCommand(std::string command)
 
 void showHelp()
 {
-    printL("Available commands : ");
-    printL("- exit: exit the game (you will be transfered to your default checkpoint).");
-    printL("- help: Show all the possibles commands.");
-    printL("- move [(<x> <y>) | <destination>] : Move yourself to a destination.");
-    printL("- stats: Show the statistics of your character.");
+    printLine("Available commands : ");
+    printLine("- exit: exit the game (you will be transfered to your default checkpoint).");
+    printLine("- help: Show all the possibles commands.");
+    printLine("- move [(<x> <y>) | <destination>] : Move yourself to a destination.");
+    printLine("- stats: Show the statistics of your character.");
 }
 
 void showUnknowCommand(std::string command)
 {
-    printL("Command not found : " + command + ".");
+    printLine("Command not found : " + command + ".");
 }

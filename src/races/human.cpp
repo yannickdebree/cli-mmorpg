@@ -1,8 +1,9 @@
+#include <creature.h>
 #include <console.h>
 #include <iostream>
 #include <races/human.h>
 
-Human::Human(std::string name) : Creature(100, 75, 500)
+Human::Human(std::string name) : Creature(100, 75, 200)
 {
     Human::name = name;
 }
@@ -14,7 +15,7 @@ std::string Human::getName()
 
 void Human::showStats()
 {
-    printL("Name : " + Human::getName());
-    printL("Race : Human");
+    printLine("Name : " + Human::getName());
+    printLine("Race : Human");
     Creature::showStats();
 }

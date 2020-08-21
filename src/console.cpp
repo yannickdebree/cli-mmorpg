@@ -6,7 +6,7 @@ void clear()
     std::cout << "\033c";
 }
 
-void printL(std::string line)
+void printLine(std::string line)
 {
     std::cout << line << "\n";
 }

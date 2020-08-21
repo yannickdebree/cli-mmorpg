@@ -12,7 +12,7 @@
 //     std::ostringstream destinationYAsString;
 //     destinationYAsString << destinationY;
 
-//     printL("Moving to " + destinationXAsString.str() + "/" + destinationYAsString.str() + "...");
+//     printLine("Moving to " + destinationXAsString.str() + "/" + destinationYAsString.str() + "...");
 
 //     // Travel::world = world;
 //     // Travel::creature = creature;

@@ -26,13 +26,13 @@ void World::placeCreature(Creature *creature, int x, int y)
     if (x < 0 || x > World::maxX)
     {
         ostr << World::maxX;
-        printL("Creature::x must be between 0 and " + ostr.str() + ".");
+        printLine("Creature::x must be between 0 and " + ostr.str() + ".");
         exit(0);
     }
     if (y < 0 || x > World::maxY)
     {
         ostr << World::maxY;
-        printL("Creature::y must be between 0 and " + ostr.str() + ".");
+        printLine("Creature::y must be between 0 and " + ostr.str() + ".");
         exit(0);
     }
 
@@ -48,7 +48,7 @@ void World::moveCreature(Creature *creature, int x, int y)
     if (x < 0 || x > World::maxX)
     {
         xOstr << World::maxX;
-        printL("Creature::x must be between 0 and " + xOstr.str() + ".");
+        printLine("Creature::x must be between 0 and " + xOstr.str() + ".");
         exit(0);
     }
     xOstr << x;
@@ -57,7 +57,7 @@ void World::moveCreature(Creature *creature, int x, int y)
     if (y < 0 || y > World::maxX)
     {
         yOstr << World::maxX;
-        printL("Creature::x must be between 0 and " + yOstr.str() + ".");
+        printLine("Creature::x must be between 0 and " + yOstr.str() + ".");
         exit(0);
     }
     yOstr << y;
@@ -65,7 +65,7 @@ void World::moveCreature(Creature *creature, int x, int y)
     int xDirection = x - creature->getX();
     int yDirection = y - creature->getY();
 
-    printL("Moved in progress...");
+    printLine("Moved in progress...");
 
     for (int i = 0; i < xDirection; ++i)
     {
@@ -78,5 +78,5 @@ void World::moveCreature(Creature *creature, int x, int y)
         }
     }
 
-    printL("Moved to " + xOstr.str() + "." + yOstr.str() + "!");
+    printLine("Moved to " + xOstr.str() + "." + yOstr.str() + "!");
 }

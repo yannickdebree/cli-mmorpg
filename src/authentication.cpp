@@ -5,7 +5,7 @@
 void showLoginScreen()
 {
     clear();
-    printL("Welcome to a fantastic world !");
+    printLine("Welcome to a fantastic world !");
 
     bool isAuthenticated = false;
 
@@ -14,10 +14,10 @@ void showLoginScreen()
 
     while (!isAuthenticated)
     {
-        printL("Pseudo :");
+        printLine("Pseudo :");
         pseudo = prompt();
 
-        printL("Password :");
+        printLine("Password :");
         plainPassword = prompt();
 
         if (authenticate(pseudo, plainPassword))
@@ -26,7 +26,7 @@ void showLoginScreen()
         }
         else
         {
-            printL("Pseudo or password wrong... Retry.");
+            printLine("Pseudo or password wrong... Retry.");
         }
     }
 }
