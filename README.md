@@ -2,5 +2,5 @@
 
 ## Required tools for development
 
-- g++
+- g++ (or an other c++ compilation tool)
 - Makefile

@@ -1,7 +1,15 @@
+.PHONY: all
 all: compile run
 
-compile:
-	g++ -o ./build/rpg -I includes ./src/*.cpp ./src/**/*.cpp
+.PHONY: compile
+compile: build build/rpg
 
-run:
+.PHONY: run
+run: build/rpg
 	./build/rpg
+
+build:
+	mkdir build
+
+build/rpg:
+	g++ -o ./build/rpg -I includes ./src/*.cpp ./src/**/*.cpp
