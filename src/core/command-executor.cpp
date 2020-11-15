@@ -73,7 +73,7 @@ bool CommandExecutor::run()
     else if (CommandExecutor::getTerm(0) == "exec")
     {
         // TODO : implement file path reading.
-        std::string path = "scripts/example.rpg";
+        std::string path = "./scripts/example.rpg";
 
         std::ifstream file(path);
 
@@ -83,18 +83,26 @@ bool CommandExecutor::run()
 
             bool exit = false;
 
-            while (getline(file, line) || !exit)
+            while (getline(file, line))
             {
-                std::cout << "Executing : " << line << std::endl;
+                std::cout << "> " << line << std::endl;
 
-                if (line.rfind("#", 0) != 0)
+                if (line.rfind("#", 0) != 0 && line != "")
                 {
                     // TODO : discriminate banned commands (exampe: "exec" is not allowed here).
-                    exit = new CommandExecutor(CommandExecutor::world, CommandExecutor::creature, line);
-                }
+                    CommandExecutor *commandExecutor = new CommandExecutor(CommandExecutor::world, CommandExecutor::creature, line);
 
-                Console::log("Script runned with success !");
+                    exit = commandExecutor->run();
+
+                    if (exit)
+                    {
+                        break;
+                        return exit;
+                    }
+                }
             }
+
+            Console::log("Script runned with success !");
 
             file.close();
         }

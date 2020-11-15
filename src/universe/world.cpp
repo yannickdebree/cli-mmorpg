@@ -63,14 +63,13 @@ void World::moveEntity(Entity *entity, int destinationX, int destinationY)
 
     Console::log("Moved in progress...");
 
-    for (int i = 0; i < xDirection; ++i)
+    for (int i = 0; i < abs(xDirection); ++i)
     {
-        for (int j = 0; j < yDirection; ++j)
+        for (int j = 0; j < abs(yDirection); ++j)
         {
-            // TODO : calcul new direction.
             usleep(entity->getMoving() * 1000);
-            entity->setX(entity->getX() + 1);
-            entity->setY(entity->getY() + 1);
+            entity->setX(entity->getX() + (xDirection > 0 ? 1 : -1));
+            entity->setY(entity->getY() + (yDirection > 0 ? 1 : -1));
         }
     }
 
