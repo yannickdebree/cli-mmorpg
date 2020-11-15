@@ -1,0 +1,23 @@
+#
+# This is an example of a script which could be imported and run by The CLI game.
+#
+
+#
+# Comments could be writen with #
+#
+
+
+# move 110.23 mode=passive
+
+# var hasGold = TRUE
+# var havePioche = TRUE
+
+# while (hasGold && havePioche) {
+#    havePioche = success(use pioche)
+
+#    if (havePioche) {
+#        hasGold = success(get gold)
+#    }
+# }
+
+move

@@ -1,7 +1,6 @@
-#include <console.h>
-#include <creature.h>
-#include <iostream>
-#include <player.h>
+#include <core/console.h>
+#include <universe/creature.h>
+#include <user/player.h>
 
 Player::Player(std::string pseudo)
 {
@@ -21,7 +20,7 @@ void Player::addCreature(Creature *creature)
 {
     if (Player::creatures.size() == Player::creaturesNbrMax)
     {
-        printLine("Player can't have more creatures...");
+        Console::log("Player can't have more creatures...");
         return;
     }
     Player::creatures.push_back(creature);

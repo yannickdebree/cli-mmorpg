@@ -1,7 +1,7 @@
 #ifndef WORLD_H
 #define WORLD_H
 
-#include <creature.h>
+#include <universe/entity.h>
 #include <iostream>
 #include <vector>
 
@@ -11,7 +11,7 @@ private:
     int maxX;
     int maxY;
     std::string name;
-    std::vector<Creature *> creatures;
+    std::vector<Entity *> entities;
 
 public:
     World(std::string name, int maxX, int maxY);
@@ -19,8 +19,8 @@ public:
     int getMaxX();
     int getMaxY();
     std::string getName();
-    void placeCreature(Creature *creature, int x, int y);
-    void moveCreature(Creature *creature, int x, int y);
+    void placeEntity(Entity *entity, int x, int y);
+    void moveEntity(Entity *entity, int destinationX, int destinationY);
 };
 
 #endif

@@ -1,9 +1,9 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include <creature.h>
-#include <iostream>
+#include <universe/creature.h>
 #include <vector>
+#include <iostream>
 
 class Player
 {

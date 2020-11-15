@@ -1,17 +1,17 @@
+#include <core/console.h>
 #include <iostream>
-#include <console.h>
 
-void clear()
+void Console::clear()
 {
     std::cout << "\033c";
 }
 
-void printLine(std::string line)
+void Console::log(std::string line)
 {
     std::cout << line << "\n";
 }
 
-std::string prompt()
+std::string Console::terminal()
 {
     std::cout << "/ ";
 

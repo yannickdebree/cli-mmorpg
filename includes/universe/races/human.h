@@ -1,7 +1,7 @@
 #ifndef HERO_H
 #define HERO_H
 
-#include <creature.h>
+#include <universe/creature.h>
 #include <iostream>
 
 class Human : public Creature
@@ -12,7 +12,7 @@ private:
 public:
     Human(std::string name);
     std::string getName();
-    void showStats();
+    void stats();
 };
 
 #endif
